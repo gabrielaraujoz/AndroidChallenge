@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 password.error = "Campo vazio"
             }
             password.text.toString().trim().length < 6 -> {
-                password.error = "A senha digitada deve ter pelo menos 6 caracteres"
+                password.error = "A senha deve ter pelo menos 6 caracteres"
             }
             else -> {
                 var intent = Intent(this, HomeActivity::class.java)
