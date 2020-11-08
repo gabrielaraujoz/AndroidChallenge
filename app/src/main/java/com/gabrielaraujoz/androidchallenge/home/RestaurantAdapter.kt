@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
 import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
-import kotlinx.android.synthetic.main.restaurants_card_view.view.*
 
 class RestaurantAdapter (private val restaurantes: List<Restaurant>, private val listener: (Restaurant) -> Unit): RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
@@ -16,13 +15,15 @@ class RestaurantAdapter (private val restaurantes: List<Restaurant>, private val
 
         private val restaurantNome by lazy {view.findViewById<TextView>(R.id.txtCardNome)}
         private val restaurantEndereco by lazy {view.findViewById<TextView>(R.id.txtCardEndereco)}
-        private val restaurantHorario by lazy {view.findViewById<TextView>(R.id.txtCardEndereco)}
+        private val restaurantHorario by lazy {view.findViewById<TextView>(R.id.txtCardHorario)}
         private val restaurantImagem by lazy {view.findViewById<ImageView>(R.id.cardImage)}
 
         fun bind (restaurante: Restaurant) {
             restaurantNome.text = restaurante.nome
             restaurantEndereco.text = restaurante.endereco
             restaurantHorario.text = "Fecha às ${restaurante.horarioFechamento}."
+
+            restaurantImagem.setImageResource(restaurante.imagem)
 
         }
 

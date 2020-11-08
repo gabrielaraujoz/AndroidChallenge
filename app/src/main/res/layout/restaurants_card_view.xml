@@ -28,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/cardImage"
+                android:src="@drawable/restaurant_photo_1"
                 android:layout_gravity="center_vertical"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/restaurant_image_description"
@@ -44,13 +45,13 @@
             android:textColor="@color/text_color_dark"
             android:textStyle="bold"
             android:textSize="36dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:textAppearance="?attr/textAppearanceHeadline6"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:id="@+id/txtCardEndereco"
             android:text="@string/card_txtview_2"
             android:textSize="18sp"
@@ -60,7 +61,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:id="@+id/txtCardHorario"
             android:text="@string/card_txtview_3"

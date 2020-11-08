@@ -1,6 +1,7 @@
 package com.gabrielaraujoz.androidchallenge.login
 
 import android.content.Intent
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gabrielaraujoz.androidchallenge.home.HomeActivity
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         password = findViewById<TextInputEditText>(R.id.txtInputLoginPassword)
 
         setupButtons()
+
 
 
     }
