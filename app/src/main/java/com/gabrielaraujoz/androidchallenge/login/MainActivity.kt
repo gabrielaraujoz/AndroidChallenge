@@ -3,8 +3,7 @@ package com.gabrielaraujoz.androidchallenge.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.text.trimmedLength
-import com.gabrielaraujoz.androidchallenge.HomeActivity
+import com.gabrielaraujoz.androidchallenge.home.HomeActivity
 import com.gabrielaraujoz.androidchallenge.R
 import com.gabrielaraujoz.androidchallenge.register.RegisterActivity
 import com.google.android.material.button.MaterialButton
