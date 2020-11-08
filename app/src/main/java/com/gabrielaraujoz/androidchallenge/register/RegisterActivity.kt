@@ -54,12 +54,6 @@ class RegisterActivity : AppCompatActivity() {
             password.text.toString().trim().length < 6 -> {
                 password.error = "A senha digitada deve ter pelo menos 6 caracteres"
             }
-            confirmPassword.text.toString().trim().isEmpty() -> {
-                confirmPassword.error = "Campo vazio"
-            }
-            confirmPassword.text.toString().trim().length < 6 -> {
-                confirmPassword.error = "A senha digitada deve ter pelo menos 6 caracteres"
-            }
             password.text.toString().trim() != confirmPassword.text.toString().trim() -> {
                 confirmPassword.error = "As duas senhas devem ser iguais"
                 Toast.makeText(this, "As duas senhas devem ser iguais", Toast.LENGTH_SHORT).show()
