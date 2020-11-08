@@ -1,4 +1,6 @@
 package com.gabrielaraujoz.androidchallenge.home.model
 
-data class Restaurant(private val nome: String, private val endereco: String, private val horarioFechamento: String, private val pratos: List<Prato>) {
+import android.media.Image
+
+data class Restaurant(val nome: String, val endereco: String, val horarioFechamento: String, val imagem: Image,val pratos: List<Prato>) {
 }

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/button_register_color"
+    android:background="@color/home_background_color"
     tools:context=".home.HomeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem=""
-        android:id="@+id/minhalista"/>
+        tools:listitem="@layout/restaurants_card_view"
+        android:id="@+id/minhaLista"/>
 
 </GridLayout>

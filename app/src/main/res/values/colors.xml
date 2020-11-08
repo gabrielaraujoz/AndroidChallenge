@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="button_color">#FF5252</color>
     <color name="button_register_color">#8492A6</color>
+    <color name="text_color_dark">#1F2D3D</color>
+    <color name="text_color_light">#8492A6</color>
+    <color name="home_background_color">#DDDDDD</color>
 </resources>
