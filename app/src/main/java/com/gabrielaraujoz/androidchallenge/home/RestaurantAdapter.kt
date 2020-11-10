@@ -7,42 +7,35 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
+import com.gabrielaraujoz.androidchallenge.home.model.Prato
 import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
 
-class RestaurantAdapter (private val restaurantes: List<Restaurant>, private val listener: (Restaurant) -> Unit): RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
+class RestaurantAdapter (private val pratos: List<Prato>, private val listener: (Prato) -> Unit): RecyclerView.Adapter<RestaurantAdapter.PratosViewHolder>() {
+    class PratosViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
-    class RestaurantViewHolder(view: View): RecyclerView.ViewHolder(view) {
+        private val pratoNome by lazy {view.findViewById<TextView>(R.id.txtPratoCardView)}
+        private val pratoImagem by lazy {view.findViewById<ImageView>(R.id.imgPratoCardView)}
 
-        private val restaurantNome by lazy {view.findViewById<TextView>(R.id.txtCardNome)}
-        private val restaurantEndereco by lazy {view.findViewById<TextView>(R.id.txtCardEndereco)}
-        private val restaurantHorario by lazy {view.findViewById<TextView>(R.id.txtCardHorario)}
-        private val restaurantImagem by lazy {view.findViewById<ImageView>(R.id.cardImage)}
+        fun bind (prato: Prato) {
 
-        fun bind (restaurante: Restaurant) {
-            restaurantNome.text = restaurante.nome
-            restaurantEndereco.text = restaurante.endereco
-            restaurantHorario.text = "Fecha às ${restaurante.horarioFechamento}."
-
-            restaurantImagem.setImageResource(restaurante.imagem)
-            val position = adapterPosition
+            pratoNome.text = prato.nomePrato
+            pratoImagem.setImageResource(prato.imagem)
 
         }
-
-
-
-
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PratosViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.restaurants_card_view, parent, false )
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.pratos_card_view, parent, false )
 
-        return RestaurantViewHolder(view)    }
+        return RestaurantAdapter.PratosViewHolder(view)
+    }
 
-    override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-        val item = restaurantes[position]
-        holder.bind(restaurantes[position])
+    override fun onBindViewHolder(holder: PratosViewHolder, position: Int) {
+        val item = pratos[position]
+        holder.bind(pratos[position])
         holder.itemView.setOnClickListener { listener(item) }    }
 
-    override fun getItemCount() = restaurantes.size
+    override fun getItemCount() = pratos.size
+
 }

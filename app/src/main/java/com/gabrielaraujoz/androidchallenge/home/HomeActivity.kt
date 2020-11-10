@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var viewManager: GridLayoutManager
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RestaurantAdapter
+    private lateinit var viewAdapter: HomeAdapter
     private lateinit var listaRestaurantes: List<Restaurant>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
         listaRestaurantes = RestaurantDatabaseFragment.restaurant
 
         recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
-        viewAdapter = RestaurantAdapter(listaRestaurantes) {
+        viewAdapter = HomeAdapter(listaRestaurantes) {
             val intent = Intent(this, RestaurantView::class.java)
             val index = listaRestaurantes.indexOf(it)
             val bundle = bundleOf(Pair("Prato", it.pratos))

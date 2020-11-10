@@ -30,14 +30,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cardImage"
+                android:id="@+id/imgPratoCardView"
                 android:src="@drawable/restaurant1"
                 android:layout_gravity="center_vertical"
                 android:scaleType="fitXY"
                 android:contentDescription="@string/restaurant_image_description"
                 />
                 <TextView
-                    android:id="@+id/txtCardNome"
+                    android:id="@+id/txtPratoCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Salada com molho Gengibre"

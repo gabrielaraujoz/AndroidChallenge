@@ -38,4 +38,10 @@
         android:textSize="36sp"
         android:layout_marginStart="19dp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/pratos_card_view"
+        android:id="@+id/pratosLista"/>
+
 </LinearLayout>
