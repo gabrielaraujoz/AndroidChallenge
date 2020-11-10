@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:isScrollContainer="true"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".home.RestaurantView">
+    tools:context=".home.RestaurantViewActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,6 +20,7 @@
             android:id="@+id/imgRestaurantView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
              />
 
         <TextView
@@ -39,10 +44,7 @@
         android:textSize="36sp"
         android:layout_marginStart="19dp"/>
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -50,5 +52,5 @@
         tools:listitem="@layout/pratos_card_view"
         android:id="@+id/pratosLista"/>
 
-    </GridLayout>
 </LinearLayout>
+</androidx.core.widget.NestedScrollView>

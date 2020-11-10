@@ -3,13 +3,14 @@ package com.gabrielaraujoz.androidchallenge.home
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
-import com.gabrielaraujoz.androidchallenge.home.data.RestaurantDatabaseFragment
+import com.gabrielaraujoz.androidchallenge.home.data.Database
 import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
 
-class RestaurantView : AppCompatActivity() {
+class RestaurantViewActivity : AppCompatActivity() {
 
     private lateinit var restaurante: Restaurant
     private lateinit var nome: String
@@ -27,6 +28,8 @@ class RestaurantView : AppCompatActivity() {
 
         var imagemRestaurante = findViewById<ImageView>(R.id.imgRestaurantView)
         imagemRestaurante.setImageResource(restaurante.imagem)
+        var nomeRestaurante = findViewById<TextView>(R.id.txtRestaurantView)
+        nomeRestaurante.text = restaurante.nome
 
         val pratos = restaurante.pratos
 
@@ -51,7 +54,7 @@ class RestaurantView : AppCompatActivity() {
     }
 
     fun encontrarRestaurante(nome: String) {
-        RestaurantDatabaseFragment.restaurant.forEach() {
+        Database.restaurant.forEach() {
             if (nome == it.nome) {
                 restaurante = it
             }

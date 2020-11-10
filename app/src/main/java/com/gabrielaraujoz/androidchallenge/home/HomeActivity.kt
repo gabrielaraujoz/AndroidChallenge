@@ -3,12 +3,11 @@ package com.gabrielaraujoz.androidchallenge.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
+import com.gabrielaraujoz.androidchallenge.home.data.Database
 import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
-import com.gabrielaraujoz.androidchallenge.home.data.RestaurantDatabaseFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -22,11 +21,11 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         viewManager = GridLayoutManager(this, 1)
-        listaRestaurantes = RestaurantDatabaseFragment.restaurant
+        listaRestaurantes = Database.restaurant
 
         recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
         viewAdapter = HomeAdapter(listaRestaurantes) {
-            val intent = Intent(this, RestaurantView::class.java)
+            val intent = Intent(this, RestaurantViewActivity::class.java)
             intent.putExtra("Nome", it.nome)
 
             startActivity(intent)
