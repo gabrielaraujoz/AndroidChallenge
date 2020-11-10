@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/cardImage"
-                android:src="@drawable/restaurant_photo_1"
+                android:src="@drawable/restaurant1"
                 android:layout_gravity="center_vertical"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/restaurant_image_description"

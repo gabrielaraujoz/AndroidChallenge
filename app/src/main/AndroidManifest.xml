@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidChallenge">
-        <activity android:name=".home.HomeActivity"></activity>
+        <activity android:name=".home.RestaurantView"></activity>
+        <activity android:name=".home.HomeActivity" />
         <activity
             android:name=".register.RegisterActivity"
             android:label="@string/register"
-            android:parentActivityName=".login.MainActivity"></activity>
+            android:parentActivityName=".login.MainActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/Theme.SplashScreen">

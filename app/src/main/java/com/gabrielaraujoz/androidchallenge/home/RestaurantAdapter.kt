@@ -24,6 +24,7 @@ class RestaurantAdapter (private val restaurantes: List<Restaurant>, private val
             restaurantHorario.text = "Fecha às ${restaurante.horarioFechamento}."
 
             restaurantImagem.setImageResource(restaurante.imagem)
+            val position = adapterPosition
 
         }
 

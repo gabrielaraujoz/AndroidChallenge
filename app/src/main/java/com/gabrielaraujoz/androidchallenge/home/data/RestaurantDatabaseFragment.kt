@@ -1,28 +1,21 @@
-package com.gabrielaraujoz.androidchallenge.home.model
+package com.gabrielaraujoz.androidchallenge.home.data
 
-import android.content.res.Resources
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.gabrielaraujoz.androidchallenge.R
+import com.gabrielaraujoz.androidchallenge.home.model.Prato
+import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
 
-class TestFragment : Fragment() {
+class RestaurantDatabaseFragment : Fragment() {
 
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_test, container, false)
-    }
 
     companion object {
 
-        val imagemRestauranteUm = R.drawable.restaurant_photo_1
+        val imagemRestauranteUm = R.drawable.restaurant1
         val imagemRestauranteDois = R.drawable.restaurant2
         val imagemRestauranteTres = R.drawable.restaurant3
         val imagemRestauranteQuatro = R.drawable.restaurant4
@@ -32,7 +25,7 @@ class TestFragment : Fragment() {
                 "Av. Lavandisca, 717 - Indianópolis, São Paulo",
                 "22:00",
                 imagemRestauranteUm,
-                listOf<Prato>()),
+                listOf<Prato>(Prato("Salada com molho Gengibre", imagemRestauranteUm, "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."))),
             Restaurant("Ayoama - Moema",
                 "Alameda dos Arapanés, 532 - Moema",
                 "00:00",
