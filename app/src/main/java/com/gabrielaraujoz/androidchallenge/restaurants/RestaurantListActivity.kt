@@ -1,4 +1,4 @@
-package com.gabrielaraujoz.androidchallenge.home
+package com.gabrielaraujoz.androidchallenge.restaurants
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,14 +6,14 @@ import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
-import com.gabrielaraujoz.androidchallenge.home.data.Database
-import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
+import com.gabrielaraujoz.androidchallenge.restaurants.data.Database
+import com.gabrielaraujoz.androidchallenge.restaurants.model.Restaurant
 
-class HomeActivity : AppCompatActivity() {
+class RestaurantListActivity : AppCompatActivity() {
 
     private lateinit var viewManager: GridLayoutManager
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: HomeAdapter
+    private lateinit var viewAdapter: RestaurantListAdapter
     private lateinit var listaRestaurantes: List<Restaurant>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +24,8 @@ class HomeActivity : AppCompatActivity() {
         listaRestaurantes = Database.restaurant
 
         recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
-        viewAdapter = HomeAdapter(listaRestaurantes) {
-            val intent = Intent(this, RestaurantViewActivity::class.java)
+        viewAdapter = RestaurantListAdapter(listaRestaurantes) {
+            val intent = Intent(this, RestaurantDetailsActivity::class.java)
             intent.putExtra("Nome", it.nome)
 
             startActivity(intent)

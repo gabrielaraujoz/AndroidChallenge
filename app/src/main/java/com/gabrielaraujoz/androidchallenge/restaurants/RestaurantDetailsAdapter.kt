@@ -1,4 +1,4 @@
-package com.gabrielaraujoz.androidchallenge.home
+package com.gabrielaraujoz.androidchallenge.restaurants
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
-import com.gabrielaraujoz.androidchallenge.home.model.Prato
-import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
+import com.gabrielaraujoz.androidchallenge.restaurants.model.Prato
 
-class RestaurantAdapter (private val pratos: List<Prato>, private val listener: (Prato) -> Unit): RecyclerView.Adapter<RestaurantAdapter.PratosViewHolder>() {
+class RestaurantDetailsAdapter (private val pratos: List<Prato>, private val listener: (Prato) -> Unit): RecyclerView.Adapter<RestaurantDetailsAdapter.PratosViewHolder>() {
     class PratosViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
         private val pratoNome by lazy {view.findViewById<TextView>(R.id.txtPratoCardView)}
@@ -28,7 +27,7 @@ class RestaurantAdapter (private val pratos: List<Prato>, private val listener: 
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.pratos_card_view, parent, false )
 
-        return RestaurantAdapter.PratosViewHolder(view)
+        return RestaurantDetailsAdapter.PratosViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PratosViewHolder, position: Int) {

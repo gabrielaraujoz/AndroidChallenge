@@ -1,4 +1,4 @@
-package com.gabrielaraujoz.androidchallenge.home
+package com.gabrielaraujoz.androidchallenge.restaurants
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,16 +7,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
-import com.gabrielaraujoz.androidchallenge.home.data.Database
-import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
+import com.gabrielaraujoz.androidchallenge.restaurants.data.Database
+import com.gabrielaraujoz.androidchallenge.restaurants.model.Restaurant
 
-class RestaurantViewActivity : AppCompatActivity() {
+class RestaurantDetailsActivity : AppCompatActivity() {
 
     private lateinit var restaurante: Restaurant
     private lateinit var nome: String
     private lateinit var viewManager: GridLayoutManager
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RestaurantAdapter
+    private lateinit var viewAdapter: RestaurantDetailsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class RestaurantViewActivity : AppCompatActivity() {
 
         viewManager = GridLayoutManager(this, 2)
         recyclerView = findViewById<RecyclerView>(R.id.pratosLista)
-        viewAdapter = RestaurantAdapter(pratos) {
+        viewAdapter = RestaurantDetailsAdapter(pratos) {
 
         }
 

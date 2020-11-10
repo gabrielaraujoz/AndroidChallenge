@@ -1,4 +1,4 @@
-package com.gabrielaraujoz.androidchallenge.home
+package com.gabrielaraujoz.androidchallenge.restaurants
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
-import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
+import com.gabrielaraujoz.androidchallenge.restaurants.model.Restaurant
 
-class HomeAdapter (private val restaurantes: List<Restaurant>, private val listener: (Restaurant) -> Unit): RecyclerView.Adapter<HomeAdapter.RestaurantViewHolder>() {
+class RestaurantListAdapter (private val restaurantes: List<Restaurant>, private val listener: (Restaurant) -> Unit): RecyclerView.Adapter<RestaurantListAdapter.RestaurantViewHolder>() {
 
     class RestaurantViewHolder(view: View): RecyclerView.ViewHolder(view) {
 

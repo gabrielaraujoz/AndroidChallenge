@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.gabrielaraujoz.androidchallenge.home.HomeActivity
+import com.gabrielaraujoz.androidchallenge.restaurants.RestaurantListActivity
 import com.gabrielaraujoz.androidchallenge.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -58,7 +58,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "As duas senhas devem ser iguais", Toast.LENGTH_SHORT).show()
             }
             else -> {
-                var intent = Intent(this, HomeActivity::class.java)
+                var intent = Intent(this, RestaurantListActivity::class.java)
                 startActivity(intent)
                 finish()
             }

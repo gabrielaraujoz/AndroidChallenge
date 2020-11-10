@@ -1,9 +1,9 @@
-package com.gabrielaraujoz.androidchallenge.home.data
+package com.gabrielaraujoz.androidchallenge.restaurants.data
 
 
 import com.gabrielaraujoz.androidchallenge.R
-import com.gabrielaraujoz.androidchallenge.home.model.Prato
-import com.gabrielaraujoz.androidchallenge.home.model.Restaurant
+import com.gabrielaraujoz.androidchallenge.restaurants.model.Prato
+import com.gabrielaraujoz.androidchallenge.restaurants.model.Restaurant
 
 class Database {
 
@@ -16,7 +16,7 @@ class Database {
         val imagemRestauranteTres = R.drawable.restaurant3
         val imagemRestauranteQuatro = R.drawable.restaurant4
         val imagemPratoOutback = R.drawable.ribsonthebarbie
-        val imagemPratoSiSenor = R.drawable.tex
+        val imagemPratoSiSenor = R.drawable.textacos
 
         val restaurant = listOf(
             Restaurant("Tony Roma's",
@@ -53,7 +53,7 @@ class Database {
                         "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
                     Prato("Salada com molho Gengibre",
                         imagemRestauranteDois,
-                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.")
                 )),
             Restaurant("Ayoama - Moema",
                 "Alameda dos Arapanés, 532 - Moema",
@@ -89,18 +89,80 @@ class Database {
                         "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
                     Prato("Camarão super especial",
                         imagemRestauranteUm,
-                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.")
                 )),
             Restaurant("Outback - Moema",
                 "Av. Moaci, 187, 187 - Moema - São Paulo",
                 "00:00",
                 imagemRestauranteTres,
-                listOf<Prato>()),
+                listOf<Prato>(
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas"),
+                    Prato("Ribs on the barbie",
+                        imagemPratoOutback,
+                        "Ribs deliciosas com molho barbecue, acompanha fritas")
+                )),
             Restaurant("Sí Señor!",
                 "Alameda Jauaperi, 626 - Moema",
                 "01:00",
                 imagemRestauranteQuatro,
-                listOf<Prato>())
+                listOf<Prato>(
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne"),
+                    Prato("Tacos do Sí Señor",
+                        imagemPratoSiSenor,
+                        "Os melhores tacos mexicanos para você, com recheio de carne")
+                ))
         )
     }
 }

@@ -1,10 +1,9 @@
 package com.gabrielaraujoz.androidchallenge.login
 
 import android.content.Intent
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.gabrielaraujoz.androidchallenge.home.HomeActivity
+import com.gabrielaraujoz.androidchallenge.restaurants.RestaurantListActivity
 import com.gabrielaraujoz.androidchallenge.R
 import com.gabrielaraujoz.androidchallenge.register.RegisterActivity
 import com.google.android.material.button.MaterialButton
@@ -57,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 password.error = "A senha deve ter pelo menos 6 caracteres"
             }
             else -> {
-                var intent = Intent(this, HomeActivity::class.java)
+                var intent = Intent(this, RestaurantListActivity::class.java)
                 startActivity(intent)
                 finish()
 
