@@ -2,6 +2,7 @@ package com.gabrielaraujoz.androidchallenge.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
@@ -23,6 +24,9 @@ class RestaurantView : AppCompatActivity() {
         nome = intent.getStringExtra("Nome")!!
 
         encontrarRestaurante(nome)
+
+        var imagemRestaurante = findViewById<ImageView>(R.id.imgRestaurantView)
+        imagemRestaurante.setImageResource(restaurante.imagem)
 
         val pratos = restaurante.pratos
 
