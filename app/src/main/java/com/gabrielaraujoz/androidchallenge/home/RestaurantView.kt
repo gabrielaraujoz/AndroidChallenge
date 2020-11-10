@@ -14,7 +14,7 @@ class RestaurantView : AppCompatActivity() {
     private lateinit var nome: String
     private lateinit var viewManager: GridLayoutManager
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: HomeAdapter
+    private lateinit var viewAdapter: RestaurantAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +23,23 @@ class RestaurantView : AppCompatActivity() {
         nome = intent.getStringExtra("Nome")!!
 
         encontrarRestaurante(nome)
+
+        val pratos = restaurante.pratos
+
+        viewManager = GridLayoutManager(this, 2)
+        recyclerView = findViewById<RecyclerView>(R.id.pratosLista)
+        viewAdapter = RestaurantAdapter(pratos) {
+
+        }
+
+        recyclerView.apply {
+            setHasFixedSize(true)
+
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
+
+
 
 
 

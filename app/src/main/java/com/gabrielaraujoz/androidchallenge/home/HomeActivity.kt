@@ -27,14 +27,8 @@ class HomeActivity : AppCompatActivity() {
         recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
         viewAdapter = HomeAdapter(listaRestaurantes) {
             val intent = Intent(this, RestaurantView::class.java)
-            val index = listaRestaurantes.indexOf(it)
-            val bundle = bundleOf(Pair("Prato", it.pratos))
             intent.putExtra("Nome", it.nome)
-            intent.putExtra("Imagem", it.imagem)
-            intent.putExtra("NomePratos", it.pratos[index].nomePrato)
-            intent.putExtra("ImagemPratos", it.pratos[index].imagem)
-            intent.putExtra("DescricaoPratos", it.pratos[index].descricao)
-            intent.putExtra("Pratos", bundle)
+
             startActivity(intent)
 
         }
