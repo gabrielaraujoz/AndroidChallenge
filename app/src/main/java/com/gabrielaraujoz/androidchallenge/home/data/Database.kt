@@ -15,6 +15,8 @@ class Database {
         val imagemRestauranteDois = R.drawable.restaurant2
         val imagemRestauranteTres = R.drawable.restaurant3
         val imagemRestauranteQuatro = R.drawable.restaurant4
+        val imagemPratoOutback = R.drawable.ribsonthebarbie
+        val imagemPratoSiSenor = R.drawable.tex
 
         val restaurant = listOf(
             Restaurant("Tony Roma's",
@@ -57,7 +59,38 @@ class Database {
                 "Alameda dos Arapanés, 532 - Moema",
                 "00:00",
                 imagemRestauranteDois,
-                listOf<Prato>()),
+                listOf<Prato>(
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Salada com molho Gengibre",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                    Prato("Camarão super especial",
+                        imagemRestauranteUm,
+                        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."),
+                )),
             Restaurant("Outback - Moema",
                 "Av. Moaci, 187, 187 - Moema - São Paulo",
                 "00:00",
