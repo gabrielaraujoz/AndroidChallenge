@@ -19,6 +19,7 @@ class RestaurantDetailsAdapter (private val pratos: List<Prato>, private val lis
 
             pratoNome.text = prato.nomePrato
             pratoImagem.setImageResource(prato.imagem)
+            val position = adapterPosition
 
         }
     }

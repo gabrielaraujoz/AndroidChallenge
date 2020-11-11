@@ -14,7 +14,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="342dp">
+        android:layout_height="250dp">
 
         <ImageView
             android:id="@+id/imgRestaurantView"
@@ -27,7 +27,9 @@
             android:id="@+id/txtRestaurantView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="36sp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/roboto"
             android:layout_marginStart="24dp"
             android:layout_alignParentBottom="true"
@@ -41,7 +43,9 @@
         android:fontFamily="@font/roboto"
         android:textColor="@color/text_color_restaurant"
         android:text="@string/title_restaurant_details"
-        android:textSize="36sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="19dp"/>
 
 

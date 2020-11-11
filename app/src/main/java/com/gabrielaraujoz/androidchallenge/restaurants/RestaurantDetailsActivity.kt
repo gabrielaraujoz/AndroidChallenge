@@ -25,6 +25,9 @@ class RestaurantDetailsActivity : AppCompatActivity() {
 
         nome = intent.getStringExtra("Nome")!!
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(nome)
+
         encontrarRestaurante(nome)
 
         var imagemRestaurante = findViewById<ImageView>(R.id.imgRestaurantView)
@@ -40,7 +43,7 @@ class RestaurantDetailsActivity : AppCompatActivity() {
             val intent = Intent(this, PratoDetailsActivity::class.java)
             intent.putExtra("NomePrato", it.nomePrato)
             intent.putExtra("DescricaoPrato", it.descricao)
-            intent.putExtra("ImagemPrato", it.imagem)
+            intent.putExtra("ImagemPrato", it.imagem.toString())
             startActivity(intent)
         }
 

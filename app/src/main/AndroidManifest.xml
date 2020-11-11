@@ -9,8 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidChallenge">
-        <activity android:name=".restaurants.PratoDetailsActivity"></activity>
-        <activity android:name=".restaurants.RestaurantDetailsActivity" />
+        <activity android:name=".restaurants.PratoDetailsActivity" android:parentActivityName=".restaurants.RestaurantDetailsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".restaurants.RestaurantDetailsActivity" />
+        </activity>
+        <activity android:name=".restaurants.RestaurantDetailsActivity" android:parentActivityName=".restaurants.RestaurantListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".restaurants.RestaurantListActivity" />
+        </activity>
         <activity android:name=".restaurants.RestaurantListActivity" />
         <activity
             android:name=".register.RegisterActivity"
