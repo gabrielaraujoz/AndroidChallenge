@@ -1,5 +1,6 @@
 package com.gabrielaraujoz.androidchallenge.restaurants
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -36,7 +37,11 @@ class RestaurantDetailsActivity : AppCompatActivity() {
         viewManager = GridLayoutManager(this, 2)
         recyclerView = findViewById<RecyclerView>(R.id.pratosLista)
         viewAdapter = RestaurantDetailsAdapter(pratos) {
-
+            val intent = Intent(this, PratoDetailsActivity::class.java)
+            intent.putExtra("NomePrato", it.nomePrato)
+            intent.putExtra("DescricaoPrato", it.descricao)
+            intent.putExtra("ImagemPrato", it.imagem)
+            startActivity(intent)
         }
 
         recyclerView.apply {
