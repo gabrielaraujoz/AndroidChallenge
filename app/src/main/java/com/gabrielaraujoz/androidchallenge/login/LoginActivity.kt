@@ -9,7 +9,7 @@ import com.gabrielaraujoz.androidchallenge.register.RegisterActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var email: TextInputEditText
     private lateinit var password: TextInputEditText
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         buttonRegister = findViewById<MaterialButton>(R.id.btnRegister)
         buttonLogin = findViewById<MaterialButton>(R.id.btnLogin)
@@ -27,14 +27,12 @@ class MainActivity : AppCompatActivity() {
 
         setupButtons()
 
-
-
     }
 
 
-    fun setupButtons() {
+    private fun setupButtons() {
         buttonRegister.setOnClickListener(){
-            var intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
@@ -44,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun verificaCamposLogin(email: TextInputEditText, password: TextInputEditText) {
+    private fun verificaCamposLogin(email: TextInputEditText, password: TextInputEditText) {
         when {
             email.text.toString().isEmpty() -> {
                 email.error = "Campo vazio"
@@ -56,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 password.error = "A senha deve ter pelo menos 6 caracteres"
             }
             else -> {
-                var intent = Intent(this, RestaurantListActivity::class.java)
+                val intent = Intent(this, RestaurantListActivity::class.java)
                 startActivity(intent)
                 finish()
 

@@ -9,21 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidChallenge">
-        <activity android:name=".restaurants.PratoDetailsActivity" android:parentActivityName=".restaurants.RestaurantDetailsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".restaurants.RestaurantDetailsActivity" />
-        </activity>
-        <activity android:name=".restaurants.RestaurantDetailsActivity" android:parentActivityName=".restaurants.RestaurantListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".restaurants.RestaurantListActivity" />
-        </activity>
+        <activity android:name=".restaurants.PratoDetailsActivity" android:theme="@style/Theme.SplashScreen" />
+        <activity android:name=".restaurants.RestaurantDetailsActivity" android:theme="@style/Theme.SplashScreen" />
+
         <activity android:name=".restaurants.RestaurantListActivity" />
         <activity
             android:name=".register.RegisterActivity"
             android:label="@string/register"
-            android:parentActivityName=".login.MainActivity" />
+            android:parentActivityName=".login.LoginActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/Theme.SplashScreen">
@@ -33,14 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.MainActivity" />
+        <activity android:name=".login.LoginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".login.MainActivity" />
+            android:value=".login.LoginActivity" />
     </application>
 
 </manifest>

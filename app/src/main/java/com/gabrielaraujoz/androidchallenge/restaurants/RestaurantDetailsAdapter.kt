@@ -19,7 +19,6 @@ class RestaurantDetailsAdapter (private val pratos: List<Prato>, private val lis
 
             pratoNome.text = prato.nomePrato
             pratoImagem.setImageResource(prato.imagem)
-            val position = adapterPosition
 
         }
     }
@@ -28,7 +27,7 @@ class RestaurantDetailsAdapter (private val pratos: List<Prato>, private val lis
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.pratos_card_view, parent, false )
 
-        return RestaurantDetailsAdapter.PratosViewHolder(view)
+        return PratosViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PratosViewHolder, position: Int) {

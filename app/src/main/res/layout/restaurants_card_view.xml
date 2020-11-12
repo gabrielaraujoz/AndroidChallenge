@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    android:id="@+id/restaurantsCardView"
+<com.google.android.material.card.MaterialCardView android:id="@+id/restaurantsCardView"
     android:layout_width="match_parent"
     android:layout_height="346dp"
     android:layout_margin="10dp"
@@ -8,7 +7,8 @@
     android:focusable="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,10 +41,10 @@
             android:id="@+id/txtCardNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/card_txtview_1"
+            tools:text="@string/card_txtview_1"
             android:textColor="@color/text_color_dark"
-            android:textStyle="bold"
-            android:textSize="36dp"
+            android:textSize="36sp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:textAppearance="?attr/textAppearanceHeadline6"
             />
@@ -53,8 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:id="@+id/txtCardEndereco"
-            android:text="@string/card_txtview_2"
+            tools:text="@string/card_txtview_2"
             android:textSize="18sp"
+            android:layout_marginStart="10dp"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="@color/text_color_light"
             />
@@ -64,7 +65,8 @@
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:id="@+id/txtCardHorario"
-            android:text="@string/card_txtview_3"
+            tools:text="@string/card_txtview_3"
+            android:layout_marginStart="10dp"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="@color/text_color_light"
             />

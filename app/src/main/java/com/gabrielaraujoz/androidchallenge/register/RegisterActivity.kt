@@ -58,7 +58,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "As duas senhas devem ser iguais", Toast.LENGTH_SHORT).show()
             }
             else -> {
-                var intent = Intent(this, RestaurantListActivity::class.java)
+                val intent = Intent(this, RestaurantListActivity::class.java)
                 startActivity(intent)
                 finish()
             }

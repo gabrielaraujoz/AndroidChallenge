@@ -1,10 +1,10 @@
 package com.gabrielaraujoz.androidchallenge.restaurants
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielaraujoz.androidchallenge.R
@@ -21,19 +21,23 @@ class RestaurantDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_restaurant_view)
+        setContentView(R.layout.activity_restaurant_details)
+
 
         nome = intent.getStringExtra("Nome")!!
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(nome)
-
         encontrarRestaurante(nome)
 
-        var imagemRestaurante = findViewById<ImageView>(R.id.imgRestaurantView)
+        val imagemRestaurante = findViewById<ImageView>(R.id.imgRestaurantView)
         imagemRestaurante.setImageResource(restaurante.imagem)
-        var nomeRestaurante = findViewById<TextView>(R.id.txtRestaurantView)
+        val nomeRestaurante = findViewById<TextView>(R.id.txtRestaurantView)
         nomeRestaurante.text = restaurante.nome
+
+        val back = findViewById<ImageView>(R.id.imgBackRestaurantDetails)
+
+        back.setOnClickListener() {
+            onBackPressed()
+        }
 
         val pratos = restaurante.pratos
 
@@ -45,6 +49,7 @@ class RestaurantDetailsActivity : AppCompatActivity() {
             intent.putExtra("DescricaoPrato", it.descricao)
             intent.putExtra("ImagemPrato", it.imagem.toString())
             startActivity(intent)
+
         }
 
         recyclerView.apply {
@@ -54,14 +59,10 @@ class RestaurantDetailsActivity : AppCompatActivity() {
             adapter = viewAdapter
         }
 
-
-
-
-
-
     }
 
-    fun encontrarRestaurante(nome: String) {
+
+    private fun encontrarRestaurante(nome: String) {
         Database.restaurant.forEach() {
             if (nome == it.nome) {
                 restaurante = it

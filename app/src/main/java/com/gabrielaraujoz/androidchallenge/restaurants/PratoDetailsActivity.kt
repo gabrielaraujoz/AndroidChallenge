@@ -17,9 +17,11 @@ class PratoDetailsActivity : AppCompatActivity() {
         val nome = intent.getStringExtra("NomePrato")
         val descricao = intent.getStringExtra("DescricaoPrato")
         val imagem = intent.getStringExtra("ImagemPrato")!!.toInt()
+        val back = findViewById<ImageView>(R.id.imgBackPratoDetails)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(nome)
+        back.setOnClickListener() {
+            onBackPressed()
+        }
 
         val nomePrato = findViewById<TextView>(R.id.txtNomePratoDetails)
         nomePrato.text = nome

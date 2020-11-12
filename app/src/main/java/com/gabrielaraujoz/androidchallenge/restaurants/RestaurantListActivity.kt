@@ -18,12 +18,12 @@ class RestaurantListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_restaurant_list)
 
         viewManager = GridLayoutManager(this, 1)
         listaRestaurantes = Database.restaurant
 
-        recyclerView = findViewById<RecyclerView>(R.id.minhaLista)
+        recyclerView = findViewById(R.id.minhaLista)
         viewAdapter = RestaurantListAdapter(listaRestaurantes) {
             val intent = Intent(this, RestaurantDetailsActivity::class.java)
             intent.putExtra("Nome", it.nome)
