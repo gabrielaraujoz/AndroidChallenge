@@ -44,7 +44,7 @@
             tools:text="@string/card_txtview_1"
             android:textColor="@color/text_color_dark"
             android:textSize="36sp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:textAppearance="?attr/textAppearanceHeadline6"
             />
